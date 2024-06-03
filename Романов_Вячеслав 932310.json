@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "3c0c7b5a-cfaf-43c2-a458-a71931014e05",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35319983"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5555/api/v1/datediff",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_date\": \"29.05.2024 22:21:05\",\r\n    \"first_tz\": \"EST\",\r\n    \"second_date\": \"10:21pm 2024-05-30\",\r\n    \"second_tz\": \"Asia/Tomsk\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5555/api/v1/datediff",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"api",
+						"v1",
+						"datediff"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5555/api/v1/convert",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"date\": \"29.05.2024 22:21:05\",\r\n    \"tz\": \"EST\",\r\n    \"target_tz\": \"Asia/Tomsk\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5555/api/v1/convert",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"api",
+						"v1",
+						"convert"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5555/Asia/Tomsk",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5555/Asia/Tomsk",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"Asia",
+						"Tomsk"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
